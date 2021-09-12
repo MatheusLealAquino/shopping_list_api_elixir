@@ -3,7 +3,7 @@
 To start your Phoenix server with Docker:
   * Build container `docker-compose build`
   * Start Phoenix endpoint `docker-compose up`
-  * Configure database `docker-compose run web minx ecto.create`
+  * Configure database `docker-compose run web mix ecto.create`
 
 To start your Phoenix server:
 
