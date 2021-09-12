@@ -7,12 +7,14 @@ defmodule ShoppingListWeb.UserView do
   end
 
   def render("show.json", %{user: user}) do
-    %{data: render_one(user, UserView, "user.json")}
+    render_one(user, UserView, "user.json")
   end
 
   def render("user.json", %{user: user}) do
-    %{id: user.id,
+    %{
+      id: user.id,
       name: user.name,
-      email: user.email}
+      email: user.email
+    }
   end
 end
