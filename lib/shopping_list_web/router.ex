@@ -23,7 +23,7 @@ defmodule ShoppingListWeb.Router do
   scope "/api", ShoppingListWeb do
     pipe_through :api
 
-    resources "/users", UserController, except: [:new, :edit]
+    resources "/users", UserController
   end
 
   # Enables LiveDashboard only for development
