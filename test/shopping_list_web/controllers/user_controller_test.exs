@@ -5,12 +5,12 @@ defmodule ShoppingListWeb.UserControllerTest do
   alias ShoppingList.Accounts.User
 
   @create_attrs %{
-    email: "some email",
+    email: "email@teste.com",
     name: "some name",
     password: "some password"
   }
   @update_attrs %{
-    email: "some updated email",
+    email: "updatedemail@teste.com",
     name: "some updated name",
     password: "some updated password"
   }
@@ -41,9 +41,9 @@ defmodule ShoppingListWeb.UserControllerTest do
 
       assert %{
                "id" => id,
-               "email" => "some email",
+               "email" => "email@teste.com",
                "name" => "some name",
-               "password" => "some password"
+              #  "password" => "some password"
              } = json_response(conn, 200)["data"]
     end
 
@@ -64,9 +64,9 @@ defmodule ShoppingListWeb.UserControllerTest do
 
       assert %{
                "id" => id,
-               "email" => "some updated email",
+               "email" => "updatedemail@teste.com",
                "name" => "some updated name",
-               "password" => "some updated password"
+              #  "password" => "some updated password"
              } = json_response(conn, 200)["data"]
     end
 
